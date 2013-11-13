@@ -35,9 +35,15 @@ while done == False:
 	# c_r = randint(10, 100)
 	
 	# pygame.draw.circle(Surface, color, pos, radius, width=0)
-	pygame.draw.circle(screen, yellow, (150,250), 50)
-	pygame.draw.circle(screen, red, (550,250), 50)
-	pygame.draw.circle(screen, green, (350,250), 50)
+	# pygame.draw.circle(screen, yellow, (150,250), 50)
+	# pygame.draw.circle(screen, red, (550,250), 50)
+	# pygame.draw.circle(screen, green, (350,250), 50)
+	
+	# pygame.draw.line(Surface, color, start_pos, end_pos, width=1)
+	# pygame.draw.line(window, (255, 255, 255), (0, 0), (30, 50))
+	pygame.draw.line(screen, yellow, (0,150), (700, 150), 1)
+	pygame.draw.line(screen, green, (0,200), (700, 200), 3)
+	pygame.draw.line(screen, red, (0,250), (700, 250), 5)
 	
 	pygame.display.flip()
 	clock.tick(1)
