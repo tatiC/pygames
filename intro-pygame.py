@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+from random import *
 
 # Defing some colors
 
@@ -26,6 +27,12 @@ while done == False:
 		elif event.type == pygame.KEYDOWN:
 			print "Pressed KEYDOWN babe!"	
 	screen.fill(black)	
+	pygame.display.flip()
+	
+	screen = pygame.display.set_mode(size, 0, 32)
+	c_pos = (randint(0, 500), randint(0, 500))
+	c_r = randint(10, 100)
+	pygame.draw.circle(screen, green, c_pos, c_r)
 	pygame.display.flip()
 	clock.tick(20)
 	
