@@ -9,6 +9,7 @@ black = (0	, 0		,  0)
 blue = (43, 114, 214)
 white = (255, 255, 255)
 green = (0	, 255,   0)
+purple = (206	, 43,   214)
 red 	= (255,   0,   0)
 yellow = (243, 250, 55)
 
@@ -64,21 +65,37 @@ while done == False:
 	
 	# Trying to write my name
 	# T
-	pygame.draw.line(screen, yellow, (0,100), (100, 100), 1)
-	pygame.draw.line(screen, yellow, (50,100), (50, 200), 1)
+	pygame.draw.line(screen, yellow, (0,100), (100, 100), 3)
+	pygame.draw.line(screen, yellow, (50,100), (50, 200), 3)
 	
 	# A
-	pygame.draw.line(screen, green, (150,100), (150, 200), 1)
-	pygame.draw.line(screen, green, (150,100), (250, 100), 1)
-	pygame.draw.line(screen, green, (250,100), (250, 200), 1)
-	pygame.draw.line(screen, green, (150,150), (250, 150), 1)
+	pygame.draw.line(screen, green, (150,100), (150, 200), 3)
+	pygame.draw.line(screen, green, (150,100), (250, 100), 3)
+	pygame.draw.line(screen, green, (250,100), (250, 200), 3)
+	pygame.draw.line(screen, green, (150,150), (250, 150), 3)
 	
 	# T
-	pygame.draw.line(screen, red, (300,100), (400, 100), 1)
-	pygame.draw.line(screen, red, (350,100), (350, 200), 1)
+	pygame.draw.line(screen, red, (300,100), (400, 100), 3)
+	pygame.draw.line(screen, red, (350,100), (350, 200), 3)
 	
 	# I
-	pygame.draw.line(screen, blue, (500,100), (500, 200), 1)
+	pygame.draw.line(screen, blue, (500,100), (500, 200), 3)
+	
+	# Retangulo
+	pygame.draw.rect(screen,white,[0,50,650,250],2)
+	
+	# Elipse
+	pygame.draw.ellipse(screen,purple,[0,50,650,250],3)
+	
+	# Text
+	font = pygame.font.Font(None, 25)
+	text1 = font.render("By: Tati Carvalho", True, green)
+	screen.blit(text1,[300,350])
+	
+	# Score
+	score = 1000
+	text2 = font.render("Score: "+str(score), True, red)
+	screen.blit(text2,[300,450])
 	
 	
 	
